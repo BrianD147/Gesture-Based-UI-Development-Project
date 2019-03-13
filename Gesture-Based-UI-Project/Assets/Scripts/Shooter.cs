@@ -11,15 +11,18 @@ public class Shooter : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		//If the user pushes left Crtl or left mouse click it will call the shoot method
 		if(Input.GetButtonDown("Fire1")){
 			Shoot();
 		}
 	}
 
+	//Sends a raycast to the object the crosshairs are pointing at
 	void Shoot(){
 		RaycastHit hit;
+		//If the raycast hits an object, the object will lose health until it is destroyed
 		if(Physics.Raycast(fps.transform.position, fps.transform.forward, out hit, range)){
-			Debug.Log(hit.transform.name);
+			//Debug.Log(hit.transform.name);
 
 			Target target = hit.transform.GetComponent<Target>();
 			if(target != null){
