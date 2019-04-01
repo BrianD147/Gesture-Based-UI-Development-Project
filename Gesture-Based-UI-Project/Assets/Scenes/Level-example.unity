@@ -2607,6 +2607,8 @@ GameObject:
   - component: {fileID: 1961341835}
   - component: {fileID: 1961341838}
   - component: {fileID: 1961341839}
+  - component: {fileID: 1961341841}
+  - component: {fileID: 1961341840}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2677,7 +2679,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1961341834}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8e53b6e84a32cfa44987efe6e97151b7, type: 3}
   m_Name: 
@@ -2700,6 +2702,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4f7913633a8b814881d4f1e63b050d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 10
+  range: 100
+  fps: {fileID: 1961341836}
+--- !u!114 &1961341840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1961341834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eaecebf04c96c7d4b90699bb2326ee3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myoGameObject: {fileID: 460153202}
+  playerObj: {fileID: 1720123435}
+  cam: {fileID: 1961341834}
+  deadZoneBorder: 15
+  sensitivity: 10
+  maxCameraXAngle: 70
+  minCameraXAngle: 60
+--- !u!114 &1961341841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1961341834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9814af8332d2b4488fdcb4a558e65ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPoseCheckEnabled: 1
+  myoGameObject: {fileID: 460153202}
+  checkNewMyoPoseRate: 1
   damage: 10
   range: 100
   fps: {fileID: 1961341836}
