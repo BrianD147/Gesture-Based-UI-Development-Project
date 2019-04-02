@@ -26,7 +26,7 @@ public class SplashScreen : MonoBehaviour {
 			title.SetActive(true);
 		 }
 		 if(mainMenuLoad <= 0){
-			SceneManager.LoadScene("Level-example");
+			SceneManager.LoadScene("MainMenu");
 		 }
 	}
 }
