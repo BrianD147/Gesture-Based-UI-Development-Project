@@ -79,7 +79,7 @@ public class MainMenu : MonoBehaviour {
 
     public void options () {
         Debug.Log("Options Selected");
-        //SceneManager.LoadScene("Options");
+        SceneManager.LoadScene("Options");
     }
 
     public void quit () {

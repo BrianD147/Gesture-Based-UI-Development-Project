@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.4465782, g: 0.49641252, b: 0.5748167, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -911,7 +911,6 @@ GameObject:
   - component: {fileID: 706766072}
   - component: {fileID: 706766071}
   - component: {fileID: 706766070}
-  - component: {fileID: 706766074}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -1001,23 +1000,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &706766074
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 706766069}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ea3a2f71f34ffe46951c6adc2ba3110, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isPoseCheckEnabled: 1
-  myoGameObject: {fileID: 0}
-  checkNewMyoPoseRate: 1
-  damage: 10
-  range: 100
-  fps: {fileID: 0}
 --- !u!1 &801532905
 GameObject:
   m_ObjectHideFlags: 0
@@ -1028,6 +1010,7 @@ GameObject:
   - component: {fileID: 801532908}
   - component: {fileID: 801532907}
   - component: {fileID: 801532906}
+  - component: {fileID: 801532909}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1095,6 +1078,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &801532909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 801532905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ea3a2f71f34ffe46951c6adc2ba3110, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPoseCheckEnabled: 1
+  myoGameObject: {fileID: 100000, guid: 863250160b56e46dbb2d227833b7338a, type: 2}
+  checkNewMyoPoseRate: 1
+  damage: 10
+  range: 100
+  fps: {fileID: 801532907}
 --- !u!1 &819434777
 GameObject:
   m_ObjectHideFlags: 0
