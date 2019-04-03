@@ -9,7 +9,7 @@ using VibrationType = Thalmic.Myo.VibrationType;
 public class PoseCheck : MonoBehaviour {
 
 	public bool isPoseCheckEnabled = true;
-    public GameObject myoGameObject;
+    private GameObject myoGameObject;
     public float checkNewMyoPoseRate = 1f;
     private float nextMyoPoseCheck = 0f;
 
@@ -25,6 +25,7 @@ public class PoseCheck : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		myoGameObject = GameObject.FindGameObjectWithTag("myo");
 		myo = myoGameObject.GetComponent<ThalmicMyo> ();
 	}
 	

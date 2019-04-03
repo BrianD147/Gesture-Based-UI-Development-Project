@@ -28,11 +28,13 @@ public class MainMenu : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		myoGameObject = GameObject.FindGameObjectWithTag("myo");
 		myo = myoGameObject.GetComponent<ThalmicMyo> ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
+
 		 if(isPoseCheckEnabled)
         {
             GetCurrentPose ();

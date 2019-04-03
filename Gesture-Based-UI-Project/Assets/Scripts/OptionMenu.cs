@@ -28,7 +28,8 @@ public class OptionMenu : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		myo = myoGameObject.GetComponent<ThalmicMyo> ();
+		myoGameObject = GameObject.FindGameObjectWithTag("myo");
+        myo = myoGameObject.GetComponent<ThalmicMyo> ();
 	}
 	
 	// Update is called once per frame

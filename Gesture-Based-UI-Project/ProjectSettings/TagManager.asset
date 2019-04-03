@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Floor
   - Target
+  - myo
   layers:
   - Default
   - TransparentFX

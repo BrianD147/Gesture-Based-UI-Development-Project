@@ -8,7 +8,7 @@ using VibrationType = Thalmic.Myo.VibrationType;
 
 public class CameraLook : MonoBehaviour {
 
-	public GameObject myoGameObject; // Armband GameObject
+	private GameObject myoGameObject; // Armband GameObject
 	public GameObject playerObj; // Player GameObject
     public GameObject cam; // Camera GameObject
     public float deadZoneBorder = 15; // Amount of movement allowed before camera actually turns
@@ -31,11 +31,13 @@ public class CameraLook : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		myo = myoGameObject.GetComponent<ThalmicMyo> ();
+        myoGameObject = GameObject.FindGameObjectWithTag("myo");
+        myo = myoGameObject.GetComponent<ThalmicMyo> ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
+
 		if(isMouseLookEnabled)
         {
             if(isCalibrated)
