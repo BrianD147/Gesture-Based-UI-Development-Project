@@ -5,6 +5,7 @@ using LockingPolicy = Thalmic.Myo.LockingPolicy;
 using Pose = Thalmic.Myo.Pose;
 using UnlockType = Thalmic.Myo.UnlockType;
 using VibrationType = Thalmic.Myo.VibrationType;
+using UnityEngine.SceneManagement;
 
 public class PoseCheck : MonoBehaviour {
 
@@ -22,6 +23,9 @@ public class PoseCheck : MonoBehaviour {
 	public Camera fps;
 
     public delegate void PoseAction();
+
+	public GameObject PauseMenuUI;
+	private bool isGamePaused = false;
 
 	// Use this for initialization
 	void Start () {
@@ -53,16 +57,22 @@ public class PoseCheck : MonoBehaviour {
 		switch(myo.pose)
 		{
 			case Pose.FingersSpread:
-				
+				if(isGamePaused)
+					Options();
 				break;
 			case Pose.Fist:
-				Shoot();
+				if (!isGamePaused)
+					Shoot();
+				else
+					Quit();
 				break;
 			case Pose.WaveIn:
-				
+				if(isGamePaused)
+					Resume();
 				break;
 			case Pose.WaveOut:
-				
+				if(!isGamePaused)
+					Pause();
 				break;
 			case Pose.DoubleTap:
 
@@ -87,5 +97,28 @@ public class PoseCheck : MonoBehaviour {
 				target.TakeDamage(damage);
 			}
 		}
+	}
+
+	public void Pause () {
+        Debug.Log("Pausing Game");
+		Time.timeScale = 0f;
+		PauseMenuUI.SetActive(true);
+    }
+
+	public void Resume () {
+        Debug.Log("Pausing Game");
+		PauseMenuUI.SetActive(false);
+		Time.timeScale = 1f;
+    }
+
+	public void Options () {
+        Debug.Log("Controls/Options Selected");
+        SceneManager.LoadScene("Options");
+    }
+
+	public void Quit() {
+		Debug.Log("Quiting Current Game");
+		SceneManager.LoadScene("MainMenu");
+		Time.timeScale = 1f;
 	}
 }

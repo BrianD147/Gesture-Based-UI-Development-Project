@@ -57,15 +57,15 @@ public class MainMenu : MonoBehaviour {
 		switch(myo.pose)
 		{
 			case Pose.FingersSpread:
-				quit();
+				Quit();
 				break;
 			case Pose.Fist:
 				break;
 			case Pose.WaveIn:
-				playGame();
+				Play();
 				break;
 			case Pose.WaveOut:
-				options();
+				Options();
 				break;
 			case Pose.DoubleTap:
 				break;
@@ -75,16 +75,16 @@ public class MainMenu : MonoBehaviour {
 				break;
 		}
     }
-    public void playGame () {
+    public void Play () {
         SceneManager.LoadScene("Level-example");
     }
 
-    public void options () {
+    public void Options () {
         Debug.Log("Options Selected");
         SceneManager.LoadScene("Options");
     }
 
-    public void quit () {
+    public void Quit () {
         Debug.Log("Quitting app");
         //Application.Quit();
     }
