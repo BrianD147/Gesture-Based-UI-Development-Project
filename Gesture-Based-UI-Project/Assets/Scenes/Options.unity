@@ -194,11 +194,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 114167989}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f1a52ae0f4518549bf93c3989f760f5, type: 3}
+  m_Script: {fileID: 11500000, guid: 5ea3a2f71f34ffe46951c6adc2ba3110, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isPoseCheckEnabled: 1
-  myoGameObject: {fileID: 0}
+  myoGameObject: {fileID: 100000, guid: 863250160b56e46dbb2d227833b7338a, type: 2}
   checkNewMyoPoseRate: 1
   damage: 10
   range: 100

@@ -31,6 +31,14 @@ public class PoseCheck : MonoBehaviour {
 	void Start () {
 		myoGameObject = GameObject.FindGameObjectWithTag("myo");
 		myo = myoGameObject.GetComponent<ThalmicMyo> ();
+
+		PlayerPrefs.SetString("lastLoadedScene", SceneManager.GetActiveScene().name);
+		Debug.Log(PlayerPrefs.GetString("lastSceneLoaded"));
+
+		if (PlayerPrefs.GetInt("isPauseLoaded") == 1)
+		{
+			Pause();
+		}
 	}
 	
 	// Update is called once per frame
@@ -57,21 +65,21 @@ public class PoseCheck : MonoBehaviour {
 		switch(myo.pose)
 		{
 			case Pose.FingersSpread:
-				if(isGamePaused)
+				if(PlayerPrefs.GetInt("isPauseLoaded") == 1)
 					Options();
 				break;
 			case Pose.Fist:
-				if (!isGamePaused)
+				if (PlayerPrefs.GetInt("isPauseLoaded") == 0)
 					Shoot();
 				else
 					Quit();
 				break;
 			case Pose.WaveIn:
-				if(isGamePaused)
+				if(PlayerPrefs.GetInt("isPauseLoaded") == 1)
 					Resume();
 				break;
 			case Pose.WaveOut:
-				if(!isGamePaused)
+				if(PlayerPrefs.GetInt("isPauseLoaded") == 0)
 					Pause();
 				break;
 			case Pose.DoubleTap:
@@ -101,12 +109,14 @@ public class PoseCheck : MonoBehaviour {
 
 	public void Pause () {
         Debug.Log("Pausing Game");
+		PlayerPrefs.SetInt("isPauseLoaded", 1);
 		Time.timeScale = 0f;
 		PauseMenuUI.SetActive(true);
     }
 
 	public void Resume () {
         Debug.Log("Pausing Game");
+		PlayerPrefs.SetInt("isPauseLoaded", 0);
 		PauseMenuUI.SetActive(false);
 		Time.timeScale = 1f;
     }
@@ -118,6 +128,7 @@ public class PoseCheck : MonoBehaviour {
 
 	public void Quit() {
 		Debug.Log("Quiting Current Game");
+		PlayerPrefs.SetInt("isPauseLoaded", 0);
 		SceneManager.LoadScene("MainMenu");
 		Time.timeScale = 1f;
 	}

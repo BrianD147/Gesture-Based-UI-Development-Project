@@ -30,6 +30,9 @@ public class MainMenu : MonoBehaviour {
 	void Start () {
 		myoGameObject = GameObject.FindGameObjectWithTag("myo");
 		myo = myoGameObject.GetComponent<ThalmicMyo> ();
+
+		PlayerPrefs.SetString("lastLoadedScene", SceneManager.GetActiveScene().name);
+		Debug.Log(PlayerPrefs.GetString("lastSceneLoaded"));
 	}
 	
 	// Update is called once per frame

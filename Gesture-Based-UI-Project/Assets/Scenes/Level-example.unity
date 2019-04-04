@@ -4285,7 +4285,7 @@ MonoBehaviour:
   damage: 10
   range: 100
   fps: {fileID: 1961341836}
-  PauseMenuUI: {fileID: 0}
+  PauseMenuUI: {fileID: 1334128460}
 --- !u!1001 &1964894726
 Prefab:
   m_ObjectHideFlags: 0

@@ -73,7 +73,9 @@ public class OptionMenu : MonoBehaviour {
 		}
     }
     public void back () {
-        SceneManager.LoadScene("MainMenu");
+		string lastScene = PlayerPrefs.GetString("lastLoadedScene");
+		Debug.Log(lastScene);
+        SceneManager.LoadScene(lastScene);
     }
 
 }
