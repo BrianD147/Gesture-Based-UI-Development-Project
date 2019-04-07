@@ -79,7 +79,7 @@ public class MainMenu : MonoBehaviour {
 		}
     }
     public void Play () {
-        SceneManager.LoadScene("Level-example");
+        SceneManager.LoadScene("Level-1");
     }
 
     public void Options () {
