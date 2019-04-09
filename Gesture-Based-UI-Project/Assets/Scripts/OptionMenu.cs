@@ -19,11 +19,6 @@ public class OptionMenu : MonoBehaviour {
     Pose lastMyoPose;
     ThalmicMyo myo;
 
-	public float damage = 10f;
-	public float range = 100f;
-
-	public Camera fps;
-
     public delegate void PoseAction();
 
 	// Use this for initialization

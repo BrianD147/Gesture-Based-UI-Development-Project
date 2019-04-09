@@ -25,6 +25,7 @@ public class PoseCheck : MonoBehaviour {
     public delegate void PoseAction();
 
 	public GameObject PauseMenuUI;
+	public GameObject RecalibrateScreenUI;
 	private bool isGamePaused = false;
 
 	// Use this for initialization
@@ -83,7 +84,7 @@ public class PoseCheck : MonoBehaviour {
 					Pause();
 				break;
 			case Pose.DoubleTap:
-
+					HideRecalibrateScreen();
 				break;
 			case Pose.Rest:
 
@@ -131,5 +132,9 @@ public class PoseCheck : MonoBehaviour {
 		PlayerPrefs.SetInt("isPauseLoaded", 0);
 		SceneManager.LoadScene("MainMenu");
 		Time.timeScale = 1f;
+	}
+
+	public void HideRecalibrateScreen(){
+		RecalibrateScreenUI.SetActive(false);
 	}
 }
