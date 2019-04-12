@@ -422,11 +422,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 415688, guid: e668a5cacee8bc64baf1874cfd1391ff, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0.57
+      value: 0.695
       objectReference: {fileID: 0}
     - target: {fileID: 415688, guid: e668a5cacee8bc64baf1874cfd1391ff, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.73
+      value: -0.727
       objectReference: {fileID: 0}
     - target: {fileID: 415688, guid: e668a5cacee8bc64baf1874cfd1391ff, type: 2}
       propertyPath: m_LocalPosition.z
@@ -651,7 +651,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 415688, guid: e668a5cacee8bc64baf1874cfd1391ff, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.712
+      value: -0.715
       objectReference: {fileID: 0}
     - target: {fileID: 415688, guid: e668a5cacee8bc64baf1874cfd1391ff, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1397,7 +1397,7 @@ GameObject:
   - component: {fileID: 445825945}
   - component: {fileID: 445825944}
   m_Layer: 5
-  m_Name: FistTxt
+  m_Name: DoubleTapTxt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1453,7 +1453,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Fist
+  m_Text: Double Tap
 --- !u!222 &445825945
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2643,15 +2643,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 415688, guid: e668a5cacee8bc64baf1874cfd1391ff, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -1.7
+      value: -1.738
       objectReference: {fileID: 0}
     - target: {fileID: 415688, guid: e668a5cacee8bc64baf1874cfd1391ff, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.1
+      value: -0.134
       objectReference: {fileID: 0}
     - target: {fileID: 415688, guid: e668a5cacee8bc64baf1874cfd1391ff, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 23
+      value: 24.722
       objectReference: {fileID: 0}
     - target: {fileID: 415688, guid: e668a5cacee8bc64baf1874cfd1391ff, type: 2}
       propertyPath: m_LocalRotation.x
@@ -3061,7 +3061,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 415688, guid: e668a5cacee8bc64baf1874cfd1391ff, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0.66
+      value: 0.735
       objectReference: {fileID: 0}
     - target: {fileID: 415688, guid: e668a5cacee8bc64baf1874cfd1391ff, type: 2}
       propertyPath: m_LocalPosition.y
@@ -3069,7 +3069,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 415688, guid: e668a5cacee8bc64baf1874cfd1391ff, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 10.02
+      value: 10.289
       objectReference: {fileID: 0}
     - target: {fileID: 415688, guid: e668a5cacee8bc64baf1874cfd1391ff, type: 2}
       propertyPath: m_LocalRotation.x
@@ -3168,7 +3168,7 @@ GameObject:
   - component: {fileID: 1309332585}
   - component: {fileID: 1309332584}
   m_Layer: 5
-  m_Name: Fist
+  m_Name: DoubleTap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3190,7 +3190,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 50, y: 0}
-  m_SizeDelta: {x: 50, y: 50}
+  m_SizeDelta: {x: 80, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1309332584
 MonoBehaviour:
@@ -3211,7 +3211,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Texture: {fileID: 2800000, guid: 774c85a4e9e2980468c74e0ae2a22c5c, type: 3}
+  m_Texture: {fileID: 2800000, guid: fc04f70a4e34e0b43942b3563261a42f, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -5143,7 +5143,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1961341834}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8e53b6e84a32cfa44987efe6e97151b7, type: 3}
   m_Name: 

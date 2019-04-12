@@ -70,10 +70,7 @@ public class PoseCheck : MonoBehaviour {
 					Options();
 				break;
 			case Pose.Fist:
-				if (PlayerPrefs.GetInt("isPauseLoaded") == 0)
-					Shoot();
-				else
-					Quit();
+				Shoot();
 				break;
 			case Pose.WaveIn:
 				if(PlayerPrefs.GetInt("isPauseLoaded") == 1)
@@ -84,7 +81,10 @@ public class PoseCheck : MonoBehaviour {
 					Pause();
 				break;
 			case Pose.DoubleTap:
-					HideRecalibrateScreen();
+				HideRecalibrateScreen();
+				if (PlayerPrefs.GetInt("isPauseLoaded") == 1){
+					Quit();
+				}
 				break;
 			case Pose.Rest:
 
