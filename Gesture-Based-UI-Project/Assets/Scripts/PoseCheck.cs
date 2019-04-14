@@ -21,6 +21,7 @@ public class PoseCheck : MonoBehaviour {
 	public float range = 100f;
 
 	public Camera fps;
+	AudioSource audioData;
 
     public delegate void PoseAction();
 
@@ -30,6 +31,8 @@ public class PoseCheck : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		audioData = GetComponent<AudioSource>();
+
 		myoGameObject = GameObject.FindGameObjectWithTag("myo");
 		myo = myoGameObject.GetComponent<ThalmicMyo> ();
 
@@ -97,10 +100,9 @@ public class PoseCheck : MonoBehaviour {
 
 	void Shoot(){
 		RaycastHit hit;
+		audioData.Play(0);
 		//If the raycast hits an object, the object will lose health until it is destroyed
 		if(Physics.Raycast(fps.transform.position, fps.transform.forward, out hit, range)){
-			//Debug.Log(hit.transform.name);
-
 			Target target = hit.transform.GetComponent<Target>();
 			if(target != null){
 				target.TakeDamage(damage);
