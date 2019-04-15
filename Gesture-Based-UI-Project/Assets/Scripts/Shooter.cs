@@ -28,8 +28,6 @@ public class Shooter : MonoBehaviour {
 		RaycastHit hit;
 		//If the raycast hits an object, the object will lose health until it is destroyed
 		if(Physics.Raycast(fps.transform.position, fps.transform.forward, out hit, range)){
-			//Debug.Log(hit.transform.name);
-
 			Target target = hit.transform.GetComponent<Target>();
 			if(target != null){
 				target.TakeDamage(damage);
